@@ -3,22 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad #</title>
+    <title>Actividad #03</title>
+
     <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
+
     <header>
-        <h1>Actividad #</h1>
+        <h1>Actividad #03</h1>
+        <p>Monitoreo de Temperatura</p>
     </header>
-    <main>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Temperatura Actual</h2>
+            <div class="temperature">
+                <span id="mostrar-temperatura">--</span>
+                <small>°C</small>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Setpoint</h2>
+
+            <input 
+                type="range" 
+                id="setpoint-slider" 
+                min="0" 
+                max="100" 
+                value="100"
+                oninput="updateSetpointValue(this.value)"
+            >
+
+            <div class="setpoint-value">
+                <span id="setpoint-value">100</span> °C
+            </div>
+
+            <div class="buzzer">
+                Buzzer: <span id="estado-buzzer">--</span>
+            </div>
+        </section>
+
     </main>
     <footer>
-        <p>Representación Frontal y Visual de Datos</p>
-        <p>Computadoras de Aeronaves</p>
-        <p>Alumno XX</p>
-        <p>Prof. Carlassara Fabrizio</p>
-        <p id="fecha"></p>
+       <p>Alumno: Matias Leonel Caram Sodano</p>
+       <p>Computadoras de Aeronaves</p>
+       <p>Prof. Carlassara Fabrizio</p>
     </footer>
-    <script src="scripts/base.js"></script>
+    <script src="styles/scripts/base.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
